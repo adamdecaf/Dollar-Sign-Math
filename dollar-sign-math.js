@@ -43,23 +43,14 @@ var $math = {
 	 * .sum(array)
 	 * Performs summation on an array of numbers.
 	 */
-	sum: function (numbs, a) {
-		// Check to see if we've been given two arguments.
-		if (arguments.length > 1) {
-			return numbs + a;
-		}
+	sum: function (numbs, pos, total) {
+		window.total = total || 0;
+		pos = pos || 0;
 		
-		// Declare the size and current element for a quick total.
-		var count = numbs.length, i = 0, total = 0;
+		if (pos != numbs.length)
+			this.sum(numbs, (pos + 1), (window.total + numbs[pos]));
 		
-		// For now we will assume that it's a numeric array, so no
-		// type validation will be performed.
-		while (i < count) {
-			total += numbs[i++];
-		}
-		
-		return total;
-		
+		return window.total;
 	},
 	
 	/**
