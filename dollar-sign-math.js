@@ -44,8 +44,8 @@ var $math = {
 	 * Performs summation on an array of numbers.
 	 */
 	sum: function (numbs, pos, total) {
-		window.total = total || 0;
-		pos = pos || 0;
+		window.total = total || numbs[0];
+		pos = pos || 1;
 		
 		if (pos != numbs.length)
 			this.sum(numbs, (pos + 1), (window.total + numbs[pos]));
