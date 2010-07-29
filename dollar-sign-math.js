@@ -85,21 +85,14 @@ var $math = {
 	 * .quotient(array)
 	 * Divides an array of numbers.
 	 */
-	quotient: function (numbs, a) {
-		// Check to see if we've been given two arguments.
-		if (arguments.length > 1) {
-			return numbs / a;
-		}
+	quotient: function (numbs, pos, total) {
+		window.total = total || numbs[0];
+		pos = pos || 1;
 		
-		// Declare the size and current element for a quick total.
-		var count = numbs.length, i = 1, total = numbs[0];
+		if (pos != numbs.length)
+			this.quotient(numbs, (pos + 1), (window.total / numbs[pos]));
 		
-		// Subtract the numbers from each other.
-		while (i < count) {
-			total /= numbs[i++];
-		}
-		
-		return total;
+		return window.total;
 	},
 	
 	/**
