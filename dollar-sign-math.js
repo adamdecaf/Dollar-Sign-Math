@@ -57,21 +57,14 @@ var $math = {
 	 * .diff(array)
 	 * Subtracts numbs[n+1] from numbs[n], then returns the result after n trials.
 	 */
-	diff: function (numbs, a) {
-		// Check to see if we've been given two arguments.
-		if (arguments.length > 1) {
-			return numbs - a;
-		}
+	diff: function (numbs, pos, total) {
+		window.total = total || 0;
+		pos = pos || 0;
 		
-		// Declare the size and current element for a quick total.
-		var count = numbs.length, i = 1, total = numbs[0];
+		if (pos != numbs.length)
+			this.sum(numbs, (pos + 1), (window.total - numbs[pos]));
 		
-		// Subtract the numbers from each other.
-		while (i < count) {
-			total -= numbs[i++];
-		}
-		
-		return total;
+		return window.total;
 	},
 	
 	/**
