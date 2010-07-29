@@ -58,13 +58,13 @@ var $math = {
 	 * Subtracts numbs[n+1] from numbs[n], then returns the result after n trials.
 	 */
 	diff: function (numbs, pos, total) {
-		window.total = total || 0;
-		pos = pos || 0;
+		window.total = numbs[0];
+		pos = pos || 1;
 		
 		if (pos != numbs.length)
-			this.sum(numbs, (pos + 1), (window.total - numbs[pos]));
+			this.sum(numbs, (pos + 1), (numbs[pos]) - window.total);
 		
-		return window.total;
+		return -1 * window.total;
 	},
 	
 	/**
