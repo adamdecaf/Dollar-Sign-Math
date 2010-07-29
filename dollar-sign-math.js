@@ -71,21 +71,14 @@ var $math = {
 	 * .product(array)
 	 * Multiplies an array of numbers.
 	 */
-	product: function (numbs, a) {
-		// Check to see if we've been given two arguments.
-		if (arguments.length > 1) {
-			return numbs * a;
-		}
+	product: function (numbs, pos, total) {
+		window.total = total || numbs[0];
+		pos = pos || 1;
 		
-		// Declare the size and current element for a quick total.
-		var count = numbs.length, i = 0, total = 1;
+		if (pos != numbs.length)
+			this.product(numbs, (pos + 1), (window.total * numbs[pos]));
 		
-		// Multiply each element
-		while (i < count) {
-			total *= numbs[i++];
-		}
-		
-		return total;
+		return window.total;
 	},
 	
 	/**
