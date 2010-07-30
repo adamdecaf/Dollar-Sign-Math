@@ -1,0 +1,20 @@
+
+<p>
+	<h2>Arithmetic</h2>
+	
+	<label>Summation (Addition):</label><br />
+		<span id="summation"></span><br />
+		<span id="summation-1"></span><br /><br />
+		
+	<label>Difference (Subtraction):</label><br />
+		<span id="diff"></span><br />
+		<span id="diff-1"></span><br /><br />
+		
+	<label>Product (Multiplication):</label><br />
+		<span id="product"></span><br />
+		<span id="product-1"></span><br /><br />
+		
+	<label>Quotient (Division):</label><br />
+		<span id="quotent"></span><br />
+		<span id="quotent-1"></span><br />
+</p>

@@ -1,0 +1,20 @@
+
+<p>
+	<label>Fractions -- Part 2</label><br /><br />
+	
+	<label>Addition</label><br />
+		<span id="add-1"></span><br />
+		<span id="add-2"></span><br /><br />
+		
+	<label>Difference</label><br />
+		<span id="diff-1"></span><br />
+		<span id="diff-2"></span><br /><br />
+		
+	<label>Product</label><br />
+		<span id="product-1"></span><br />
+		<span id="product-2"></span><br /><br />
+		
+	<label>Quotent</label><br />
+		<span id="quotent-1"></span><br />
+		<span id="quotent-2"></span><br /><br />
+</p>

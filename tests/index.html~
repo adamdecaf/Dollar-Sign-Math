@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Dollar Sign Math Framework</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- Show the results from the xhr. -->
+	<div id="results"></div>
+
+	<!-- Show the rest of the page. -->
+	<h3 onclick="window.location = 'index.html';">Dollar Sign Math Framework</h3>
+	
+	<ul>
+		<li><a href="#arithmetic" onclick="javascript:load('arithmetic');">Arithmetic</a></li>
+		<li><a href="#advanced-arithmetic" onclick="javascript:load('advanced-arithmetic');">Advanced Arithmetic</a></li>
+		<li><a href="#conversions" onclick="javascript:load('conversions');">Conversions</a></li>
+		<!-- <li><a href="#conversions2" onclick="javascript:load('conversions2');">Conversions #2</a></li> -->
+		<li><a href="#random" onclick="javascript:load('random');">Random</a></li>
+		<li><a href="#trig" onclick="javascript:load('trig');">Trig</a></li>
+		<li><a href="#basic-stats" onclick="javascript:load('basic-stats');">Basic Stats</a></li>
+		<li><a href="#misc" onclick="javascript:load('misc');">Misc #1</a></li>
+		<li><a href="#misc-2" onclick="javascript:load('misc-2');">Misc #2</a></li>
+		<li><a href="#misc-3" onclick="javascript:load('misc-3');">Misc #3</a></li>
+		<li><a href="#number_functions" onclick="javascript:load('number_functions');">Number Functions</a></li>
+		<li><a href="#fractions" onclick="javascript:load('fractions');">Fractions</a></li>
+		<li><a href="#fractions-2" onclick="javascript:load('fractions-2');">Fractions #2</a></li>
+		<li><a href="#advanced-operations" onclick="javascript:load('advanced-operations');">Advanced Operations</a></li>
+		<li><a href="#formatting" onclick="javascript:load('formatting');">Formatting</a></li>
+		<li><a href="#matrices" onclick="javascript:load('matrices');">Matrices</a></li>
+	</ul>
+	
+	Plugins:
+	<ul>
+		<li><a href="#plugin:shapes,shapes-test" onclick="javascript:load_plugin('shapes', 'shapes-test');">Shapes</a></li>
+		<li><a href="#plugin:physics,physics-test" onclick="javascript:load_plugin('physics', 'physics-test');">Physics #1</a></li>
+		<li><a href="#plugin:physics,physics-test-2" onclick="javascript:load_plugin('physics', 'physics-test-2');">Physics #2</a></li>
+		<!-- <li><a href="#plugin:temp-change,temp-change-test" onclick="javascript:load_plugin('temp-change', 'temp-change-test');">Temp Change</a></li> -->
+	</ul>
+
+<script src="dollar-sign-math.js"></script>
+<script src="js/xhr.js"></script>
+<script id="page-js">
+window.onload = function () {
+
+	// Grab the hash
+	var hash = window.location.hash.substr(1);
+	
+		if ((/^plugin:[a-z0-9-_]{1,},[a-z0-9-_]{1,}$/ig).test(hash)) {
+		
+			var plugin = hash.split(',', 1).toString();
+				plugin = plugin.substr(7, hash.length);
+				
+			var page = hash.slice(plugin.length + 8);
+			
+				// alert(plugin);
+				// alert(page);
+				
+			load_plugin(plugin, page);
+			
+		} else {
+			
+			if (hash === '') {
+				hash = 'intro';
+			}
+			
+			load(hash);
+			
+		}
+	
+};
+</script>
+</body>
+</html>

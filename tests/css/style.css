@@ -1,0 +1,39 @@
+/**
+ * Dollar Sign Math Tests CSS
+ * Adam Shannon
+ * 2010-01-20
+ */
+ 
+a {
+	color: #000000;
+}
+
+h3 {
+	cursor: pointer;
+	font-family: Courier, Helvetica; 
+}
+
+ul {
+	list-style-type: decimal;
+}
+
+div#results {
+	border: 1px solid #000000;
+	display: block;
+	float: right;
+	height: auto;
+	padding: 5px 5px 5px 5px;
+	/* position: fixed; */
+	right: 10px;
+	width: 800px;
+}
+
+span {
+	font-family: courier;
+	letter-spacing: -1px;
+	margin-left: 15px;
+}
+
+label {
+	font-weight: bold;
+}
