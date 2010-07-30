@@ -1,0 +1,26 @@
+Dollar Sign Math
+
+Dollar Sign Math ($math) is a javascript framework designed to give developers 
+easy access to mathematical functions and processes.  The entire framework is 
+free to use and easy to understand.
+
+----
+Examples
+
+ $math.sum([1,2,3,4,5]) = 1+2+3+4+5 = 15
+ $math.paddFront(2, 7) = 00000002
+ $math.positive(-2) = false
+ $math.min([1,6,2,6,8,3,8,9,3,-1]) = -1
+ $math.mean([22,67,10,1,6,8,8,3,32])
+ $math.mode([1,6,6,2,2,7,9,4,3,2])
+ $math.gcf(24, 2)
+ $math.lcm(100, 250)
+ $math.
+
+----
+
+
+Talk to the developer (Adam Shannon) at adam@ashannon.us, or right here on github!
+
+http://dollarsignmath.org
+http://ashannon.us
