@@ -790,13 +790,12 @@ var $math = {
 	summation: function (equation, start, end) {
 	
 		var total = 0;
-		var x = start;
 		
 		// Alright, we're going to take _equation_ and sum it from _start_ to _end_.
 		for (var n = start; n <= end; n++) {
 			
 			// x = n;
-			total += equation(x = n);
+			total += equation(start = n);
 			
 		}
 		
