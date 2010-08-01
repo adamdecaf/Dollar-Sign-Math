@@ -565,8 +565,9 @@ var $math = {
 		
 		offset = offset || '';
 		
-		var length = values.length;
-		var list = '';
+		var 
+			length = values.length,
+			list = '';
 		
 		for (var n = 0; n < length; n++) {
 		
