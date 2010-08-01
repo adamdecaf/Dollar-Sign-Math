@@ -737,8 +737,9 @@ var $math = {
 	 * Returns the fraction value of _value_.
 	 */
 	fraction: function (value, array) {
-		var top = value * (1 + this.paddEnd(0, value.toString().length - 3));
-		var bottom = 1 + this.paddEnd(0, value.toString().length - 3);
+		var 
+			bottom = 1 + this.paddEnd(0, value.toString().length - 3),
+			top = value * bottom;
 
 		// Find the gcf of both numbers.
 		var gcf = this.gcf(top, bottom);
