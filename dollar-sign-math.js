@@ -709,13 +709,12 @@ var $math = {
 	 * Return the least common multiple of a, b.
 	 */
 	lcm: function (a, b) {
-		var mult_a = this.multiples(a, 25, 1);
-		var mult_b = this.multiples(b, 25, 1);
-		
-		var a_len = mult_a.length;
-		var b_len = mult_b.length;
-		
-		var lcm = 10000000000000;
+		var 
+			mult_a = this.multiples(a, 25, 1),
+			mult_b = this.multiples(b, 25, 1),
+			a_len = mult_a.length,
+			b_len = mult_b.length,
+			lcm = 10000000000000;
 		
 		for (var n = 0; n < a_len; n++) {
 			
