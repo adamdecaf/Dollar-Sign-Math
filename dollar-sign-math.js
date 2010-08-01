@@ -491,8 +491,9 @@ var $math = {
 	 * For now we will use a bubble sort.
 	 */
 	sortDesc: function (values) {
-		var length = values.length;
-		var tmp = 0;
+		var 
+			length = values.length,
+			tmp = 0;
 		
 		for (var n = 0; n < length; n++) {
 			
@@ -521,8 +522,9 @@ var $math = {
 	 * For now we will use a bubble sort.
 	 */
 	sortAsc: function (values) {
-		var length = values.length;
-		var tmp = 0;
+		var 
+			length = values.length,
+			tmp = 0;
 		
 		for (var n = 0; n < length; n++) {
 			
