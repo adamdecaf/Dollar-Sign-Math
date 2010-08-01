@@ -914,9 +914,10 @@ var $math = {
 		
 		if (fraction2 !== undefined) {
 		
-			var lcm = this.lcm(fraction1[1], fraction2[1]);
-			var top_m = lcm / fraction1[1];
-			var bot_m = lcm / fraction2[1];
+			var 
+				lcm = this.lcm(fraction1[1], fraction2[1]),
+				top_m = lcm / fraction1[1],
+				bot_m = lcm / fraction2[1];
 			
 			return [(fraction1[0] * top_m) + (fraction2[0] * bot_m), (fraction1[1] * top_m)];
 			
@@ -936,9 +937,10 @@ var $math = {
 		
 		if (fraction2 !== undefined) {
 		
-			var lcm = this.lcm(fraction1[1], fraction2[1]);
-			var top_m = lcm / fraction1[1];
-			var bot_m = lcm / fraction2[1];
+			var 
+				lcm = this.lcm(fraction1[1], fraction2[1]),
+				top_m = lcm / fraction1[1],
+				bot_m = lcm / fraction2[1];
 			
 			return [(fraction1[0] * top_m) - (fraction2[0] * bot_m), (fraction1[1] * top_m)];
 			
