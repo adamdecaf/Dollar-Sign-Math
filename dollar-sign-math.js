@@ -649,9 +649,10 @@ var $math = {
 	 * Return the standard deviation of _numbers_.
 	 */
 	stDev: function (numbers) {
-		var mean = this.mean(numbers);
-		var length = numbers.length;
-		var exp = 0;
+		var 
+			mean = this.mean(numbers),
+			length = numbers.length,
+			exp = 0;
 		
 		for (var n = 0; n < length; n++) {
 			
