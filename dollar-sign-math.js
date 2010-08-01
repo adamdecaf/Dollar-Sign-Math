@@ -1090,10 +1090,11 @@ var $math = {
 	 */
 	validateMatricesDimensions: function () {
 	
-		var numMatrices = arguments.length;
-		var firstCols = arguments[0][0].length;
-		var firstRows = arguments[0].length;
-		var n;
+		var 
+			numMatrices = arguments.length,
+			firstCols = arguments[0][0].length,
+			firstRows = arguments[0].length,
+			n;
 	
 		// Validate all of the matrices dimensions
 		// TODO: Validate all of the row's colum counts, not just the first row.
@@ -1115,10 +1116,11 @@ var $math = {
 	 */
 	addMatrices: function () {
 		
-		var numMatrices = arguments.length;
-		var firstCols = arguments[0][0].length;
-		var firstRows = arguments[0].length;
-		var i = 0, n = 0, w = 0;
+		var 
+			numMatrices = arguments.length,
+			firstCols = arguments[0][0].length,
+			firstRows = arguments[0].length,
+			i = 0, n = 0, w = 0;
 		
 		// In order for matrices to be added the dimensions need to be the same
 		var validMatricesDimensions = this.validateMatricesDimensions(arguments);
@@ -1155,10 +1157,11 @@ var $math = {
 	 */
 	subtractMatrices: function () {
 	
-		var numMatrices = arguments.length;
-		var firstCols = arguments[0][0].length;
-		var firstRows = arguments[0].length;
-		var i = 0, n = 0, w = 0;
+		var 
+			numMatrices = arguments.length,
+			firstCols = arguments[0][0].length,
+			firstRows = arguments[0].length,
+			i = 0, n = 0, w = 0;
 		
 		// In order for matrices to be added the dimensions need to be the same
 		var validMatricesDimensions = this.validateMatricesDimensions(arguments);
@@ -1202,9 +1205,10 @@ var $math = {
 		// Validate that _value_ is a real number.
 		value = this.float(value) || 1;
 		
-		var cols = matrix.length;
-		var rows = matrix[0].length;
-		var i, n;
+		var 
+			cols = matrix.length,
+			rows = matrix[0].length,
+			i, n;
 		
 		for (n = 0; n < rows; n++) {
 			for (i = 0; i < cols; i++) {
