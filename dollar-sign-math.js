@@ -993,9 +993,10 @@ var $math = {
 		integer = (integer === undefined) ? true : false;
 		seperator = seperator || ',';
 		
-		var decimal = number.toString().split('.');
-		var length = decimal[0].length;
-		var formatted = '', n;
+		var 
+			decimal = number.toString().split('.'),
+			length = decimal[0].length,
+			formatted = '', n;
 		
 			// If we want an empty decimal value to be chopped off we do it here
 			var tail = '';
