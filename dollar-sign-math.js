@@ -678,13 +678,12 @@ var $math = {
 	 * Return the greatest common factor between _a_ and _b_.
 	 */
 	gcf: function (a, b) {
-		var fact_a = this.factors(a, true);
-		var fact_b = this.factors(b, true);
-		
-		var a_len = fact_a.length;
-		var b_len = fact_b.length;
-		
-		var gcf = 0;
+		var 
+			fact_a = this.factors(a, true),
+			fact_b = this.factors(b, true),
+			a_len = fact_a.length,
+			b_len = fact_b.length,
+			gcf = 0;
 		
 		for (var n = 0; n < a_len; n++) {
 			
