@@ -598,8 +598,9 @@ var $math = {
 		// (list === true) ? list = true : list = false;
 		list = list || false;
 		
-		var factors = [];
-		var lowest_upper_factor = number;
+		var 
+			factors = [],
+			lowest_upper_factor = number;
 		
 		// Process each integer until you hit _number_ and see if it's divisible.
 		for (var n = 0; n < number; n++) {
