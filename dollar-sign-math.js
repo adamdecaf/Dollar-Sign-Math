@@ -31,7 +31,7 @@ var $math = {
 	/**
 	 * Version
 	 */
-	version: '0.3.1',
+	version: '0.3.2',
 
 	/**
 	 * Constants
@@ -55,7 +55,7 @@ var $math = {
 	 * .diff(array)
 	 * Subtracts numbs[n+1] from numbs[n], then returns the result after n trials.
 	 */
-	diff: function (numbs, pos, total) {
+	diff: function (numbs) {
 		var i, total = numbs[0], len = numbs.length;
 		for (i = 1; i < len; i++) {
 			total -= numbs[i];
@@ -67,7 +67,7 @@ var $math = {
 	 * .product(array)
 	 * Multiplies an array of numbers.
 	 */
-	product: function (numbs, pos, total) {
+	product: function (numbs) {
 		var i, total = numbs[0], len = numbs.length;
 		for (i = 1; i < len; i++) {
 			total *= numbs[i];
@@ -79,7 +79,7 @@ var $math = {
 	 * .quotient(array)
 	 * Divides an array of numbers.
 	 */
-	quotient: function (numbs, pos, total) {
+	quotient: function (numbs) {
 		var i, total = numbs[0], len = numbs.length;
 		for (i = 1; i < len; i++) {
 			total += numbs[i];
@@ -307,7 +307,7 @@ var $math = {
 	 * Check if two values are equal to each other (between a specified offset).
 	 */
 	equal: function (a, b, offset) {
-		return (Math.abs(a - b) <= (offset || 0.0001 ));
+		return (Math.abs(a - b) <= (offset || 0.0001));
 	},
 	
 	/**
