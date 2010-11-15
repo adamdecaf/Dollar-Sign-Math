@@ -56,3 +56,8 @@ class maths:
 		for self.i in xrange(1,len(numbs)):
 			self.total /= numbs[self.i]
 		return self.total
+		
+	def mod(a,b):
+		# This is supposed to return the sign
+		# of the operand
+		return a % b
