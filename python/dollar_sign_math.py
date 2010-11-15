@@ -26,49 +26,49 @@
 
 from random import random
 
-class maths:
+class dollar_sign_math:
 	def __init__(self):
 		self.version = '0.4.0'
 		self.e = 2.718281828459045235
 		self.pi = 3.1415926535897932384626433
-		self.i, self.k, self.total = 0
+		self.i, self.k, self.total = 0,0,0
 		
-	def sum(numbs):
+	def sum(self, numbs):
 		self.total = numbs[0]
 		for self.i in xrange(1,len(numbs)):
 			self.total += numbs[self.i]
 		return self.total
 	
-	def diff(numbs):
+	def diff(self, numbs):
 		self.total = numbs[0]
 		for self.i in xrange(1,len(numbs)):
 			self.total -= numbs[self.i]
 		return self.total
 		
-	def product(numbs):
+	def product(self, numbs):
 		self.total = numbs[0]
 		for self.i in xrange(1,len(numbs)):
 			self.total *= numbs[self.i]
 		return self.total
 	
-	def quotient(numbs):
+	def quotient(self, numbs):
 		self.total = numbs[0]
 		for self.i in xrange(1,len(numbs)):
 			self.total /= numbs[self.i]
 		return self.total
 		
-	def mod(a,b):
+	def mod(self, a,b):
 		# This is supposed to return the sign
 		# of the operand
 		return a % b
 		
-	def _paddFront(value, times):
+	def _paddFront(self, value, times):
 		value = str(value)
 		for self.i in xrange(times):
 			value = '0' + value
 		return value
 		
-	def _paddEnd(value, times):
+	def _paddEnd(self, value, times):
 		value = str(value)
 		for self.i in xrange(times):
 			value += '0'
