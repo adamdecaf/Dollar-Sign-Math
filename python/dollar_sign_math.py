@@ -61,3 +61,15 @@ class maths:
 		# This is supposed to return the sign
 		# of the operand
 		return a % b
+		
+	def _paddFront(value, times):
+		value = str(value)
+		for self.i in xrange(times):
+			value = '0' + value
+		return value
+		
+	def _paddEnd(value, times):
+		value = str(value)
+		for self.i in xrange(times):
+			value += '0'
+		return value
