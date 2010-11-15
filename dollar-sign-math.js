@@ -93,7 +93,11 @@ var $math = {
 	 */
 	modulus: function (value, a) {		
 		return value % a;
-	}, 
+	},
+	
+	mod: function (value, a) {
+		return this.modulus(value, a);
+	},
 	
 	/**
 	 * _paddFront(value, times)
