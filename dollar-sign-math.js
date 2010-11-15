@@ -43,14 +43,12 @@ var $math = {
 	 * .sum(array)
 	 * Performs summation on an array of numbers.
 	 */
-	sum: function (numbs, pos, total) {
-		window.total = total || numbs[0];
-		pos = pos || 1;
-		
-		if (pos != numbs.length)
-			this.sum(numbs, (pos + 1), (window.total + numbs[pos]));
-		
-		return window.total;
+	sum: function (numbs) {
+		var i, total = numbs[0], len = numbs.length;
+		for (i = 1; i < len; i++) {
+			total += numbs[i];
+		}
+		return total;
 	},
 	
 	/**
@@ -58,13 +56,11 @@ var $math = {
 	 * Subtracts numbs[n+1] from numbs[n], then returns the result after n trials.
 	 */
 	diff: function (numbs, pos, total) {
-		window.total = total || numbs[0];
-		pos = pos || 1;
-		
-		if (pos != numbs.length)
-			this.diff(numbs, (pos + 1), (window.total - numbs[pos]));
-		
-		return window.total;
+		var i, total = numbs[0], len = numbs.length;
+		for (i = 1; i < len; i++) {
+			total -= numbs[i];
+		}
+		return total;
 	},
 	
 	/**
@@ -72,13 +68,11 @@ var $math = {
 	 * Multiplies an array of numbers.
 	 */
 	product: function (numbs, pos, total) {
-		window.total = total || numbs[0];
-		pos = pos || 1;
-		
-		if (pos != numbs.length)
-			this.product(numbs, (pos + 1), (window.total * numbs[pos]));
-		
-		return window.total;
+		var i, total = numbs[0], len = numbs.length;
+		for (i = 1; i < len; i++) {
+			total *= numbs[i];
+		}
+		return total;
 	},
 	
 	/**
@@ -86,13 +80,11 @@ var $math = {
 	 * Divides an array of numbers.
 	 */
 	quotient: function (numbs, pos, total) {
-		window.total = total || numbs[0];
-		pos = pos || 1;
-		
-		if (pos != numbs.length)
-			this.quotient(numbs, (pos + 1), (window.total / numbs[pos]));
-		
-		return window.total;
+		var i, total = numbs[0], len = numbs.length;
+		for (i = 1; i < len; i++) {
+			total += numbs[i];
+		}
+		return total;
 	},
 	
 	/**
