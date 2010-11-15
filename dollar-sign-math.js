@@ -96,10 +96,10 @@ var $math = {
 	}, 
 	
 	/**
-	 * paddFront(value, times)
+	 * _paddFront(value, times)
 	 * Padd a value at the front
 	 */
-	paddFront: function (value, times) {
+	_paddFront: function (value, times) {
 		
 		// Declare the value as a string
 		value = value.toString();
@@ -113,10 +113,10 @@ var $math = {
 	},
 	
 	/**
-	 * .paddEnd(value, times)
+	 * ._paddEnd(value, times)
 	 * Padd a value at the end.
 	 */
-	paddEnd: function (value, times) {
+	_paddEnd: function (value, times) {
 		
 		// Declare the value as a string
 		value = value.toString();
@@ -148,7 +148,7 @@ var $math = {
 		
 		// Check to see if we need to padd the value.
 		if (value[1].length < places) {
-			value[1] = this.paddEnd(value[1], (places - value[1].length));
+			value[1] = this._paddEnd(value[1], (places - value[1].length));
 		}
 		
 		// Send the truncated value back.
@@ -733,7 +733,7 @@ var $math = {
 	 */
 	fraction: function (value, array) {
 		var 
-			bottom = 1 + this.paddEnd(0, value.toString().length - 3),
+			bottom = 1 + this._paddEnd(0, value.toString().length - 3),
 			top = value * bottom;
 
 		// Find the gcf of both numbers.
