@@ -16,3 +16,4 @@ if maths.quotient([6,3,0.5,2]) == 2.0:
 	
 if maths.mod(5,2) == 1 and maths.mod(5,-2) == -1:
 	print 'Mod = true'
+	

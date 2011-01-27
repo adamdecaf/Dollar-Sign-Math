@@ -73,3 +73,18 @@ class dollar_sign_math:
 		for self.i in xrange(times):
 			value += '0'
 		return value
+		
+	def round(value, places, base):
+		value = str(value).split('.');
+		places = this.abs(place);
+		
+		value[1] = value[1] || '0';
+		
+		places = places || 2;
+		base = base || 10;
+		
+		if (value[1].length < places) {
+			value[1] = this._paddEnd(value[1], (places - value[1].length));
+		}
+		
+		return value[0] + '.' + value[1].toString().substr(0, places);
